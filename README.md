@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+![WhatsApp Image 2026-03-09 at 11 59 07 AM](https://github.com/user-attachments/assets/83ae3de0-fb33-41ff-aacb-3b50d8abe5a8)# FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -37,19 +37,67 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+## FULL ADDER
+
+<img width="429" height="395" alt="image" src="https://github.com/user-attachments/assets/32971809-0306-4b53-8f53-b05db54d807d" />
+
+## FULL SUBTRACTOR
+
+<img width="438" height="393" alt="image" src="https://github.com/user-attachments/assets/9dc86c86-8a0c-428e-bcdc-48ce24adf187" />
 
 **Procedure**
 
-Write the detailed procedure here
+Type the program in Quartus software.
+
+Compile and run the program.
+
+Generate the RTL schematic and save the logic diagram.
+
+Create nodes for inputs and outputs to generate the timing diagram.
+
+For different input combinations generate the timing diagram.
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+## Developed by: DEEPAK.V
+## RegisterNumber: 212225230044
 */
-
+## FULL ADDER
+```
+module EXP4FULLADDER(A,B,Cin,Sum,Carry);
+input A,B,Cin;
+output Sum,Carry;
+assign Sum=A^B^Cin;
+assign Carry=A&B|B&Cin|A&Cin;
+endmodule
+```
+## FULL SUBTRACTOR
+```
+module EXP4FULLSUBTRACTOR(A,B,Cin,Difference,Borrow);
+input A,B,Cin;
+output Difference,Borrow;
+assign Difference=A^B^Cin;
+assign Borrow=~A&B|B&Cin|~A&Cin;
+endmodule
+```
 **RTL Schematic**
+## FULL ADDER
+
+![WhatsApp Image 2026-03-09 at 11 57 10 AM](https://github.com/user-attachments/assets/ae902bbf-fb2e-4db7-8a97-a6ab2899e532)
+
+## FULL SUBTRACTOR
+
+![WhatsApp Image 2026-03-09 at 12 03 22 PM](https://github.com/user-attachments/assets/9da7d823-4402-4b67-beeb-0d0b0a0a6d68)
 
 **Output Timing Waveform**
+## FULL ADDER
+
+<img width="1600" height="848" alt="image" src="https://github.com/user-attachments/assets/6435c227-53a0-499a-9645-46cbd38141ac" />
+
+## FULL SUBTRACTOR
+
+![WhatsApp Image 2026-03-09 at 12 04 44 PM](https://github.com/user-attachments/assets/301fa8a4-5409-4b49-b22e-5fcb391ddb29)
 
 **Result:**
 
